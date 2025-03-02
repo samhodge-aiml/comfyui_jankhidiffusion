@@ -12,3 +12,25 @@ Repository = "https://github.com/blepping/comfyui_jankhidiffusion"
 PublisherId = "blepping"
 DisplayName = "comfyui_jankhidiffusion"
 Icon = ""
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [ 
+    "comfyui_jankhidiffusion",
+    "comfyui_jankhidiffusion.py",
+]
+
+[tool.setuptools.package-dir]
+"comfyui_jankhidiffusion" = "."
+"comfyui_jankhidiffusion.py" = "py"
+
+
+[project.entry-points."comfyui.custom_nodes"]
+comfyui_jankhidiffusion = "comfyui_jankhidiffusion"
+
+
+[tool.setuptools.package-data]
+"*" = ["**/*.js" ]
