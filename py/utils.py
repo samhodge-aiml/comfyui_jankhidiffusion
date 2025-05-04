@@ -224,7 +224,7 @@ class Integrations:
 
     @staticmethod
     def get_custom_node(name: str) -> ModuleType | None:
-        module_key = f"custom_nodes.{name}"
+        module_key = f"{name}"
         with contextlib.suppress(StopIteration):
             spec = importlib.util.find_spec(module_key)
             if spec is None:
